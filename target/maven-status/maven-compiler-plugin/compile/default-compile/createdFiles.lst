@@ -1,0 +1,7 @@
+Models/Column.class
+Models/Change.class
+Models/ColumnBase.class
+Models/Component.class
+Models/File.class
+Models/DateColumn.class
+Models/Commit.class
