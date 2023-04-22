@@ -1,4 +1,4 @@
-package Models;
+package org.dxworks.tables.models;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
