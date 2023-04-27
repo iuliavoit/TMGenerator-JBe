@@ -1,5 +1,7 @@
 package org.dxworks.tables.models;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -67,5 +69,39 @@ public class Table<T> {
         }
         return columnJson;
     }*/
+  /* public String generateJsonFromTable() {
+       Gson gson = new GsonBuilder()
+               .registerTypeAdapter(Column.class, new ColumnSerializer())
+               .setPrettyPrinting()
+               .create();
 
+       return gson.toJson(columns);
+   }*/
+   public String generateJson() {
+       Gson gson = new GsonBuilder()
+               .registerTypeAdapter(Column.class, new ColumnSerializer())
+               .setExclusionStrategies(new ColumnExclusionStrategy())
+               .setPrettyPrinting()
+               .create();
+
+       return gson.toJson(columns);
+   }
+
+    public static <T, R> List<Column<T, ?>> extractLeafColumns(Table<T> table) {
+        List<Column<T, ?>> leafColumns = new ArrayList<>();
+        for (Column<T, ?> column : table.columns) {
+            extractLeafColumnsHelper(column, leafColumns);
+        }
+        return leafColumns;
+    }
+
+    private static <T, R> void extractLeafColumnsHelper(Column<T, ?> column, List<Column<T, ?>> leafColumns) {
+        if (column.childrenColumns.isEmpty()) {
+            leafColumns.add(column);
+        } else {
+            for (Column<T, ?> child : column.childrenColumns) {
+                extractLeafColumnsHelper(child, leafColumns);
+            }
+        }
+    }
 }

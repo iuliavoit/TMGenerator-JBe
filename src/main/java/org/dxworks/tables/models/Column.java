@@ -13,7 +13,7 @@ import java.util.function.Function;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Column<T, R> extends ColumnBase {
+public class Column<T, R> {
 
     protected String id;
     protected String type;
@@ -25,7 +25,7 @@ public class Column<T, R> extends ColumnBase {
     protected Boolean borderL;
     protected Boolean borderR;
     protected Boolean borderB;
-    protected List<ColumnBase> childrenColumns;
+    protected List<Column> childrenColumns;
 
     protected Function<T, R> computer;
     protected BiFunction<T, R, Map<String, String>> conditionalFormatter;
