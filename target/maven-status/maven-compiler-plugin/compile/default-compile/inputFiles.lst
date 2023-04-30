@@ -1,8 +1,5 @@
-/Users/iuliavoit/Desktop/licenta/TMG-Jbe/src/main/java/data/test.java
+/Users/iuliavoit/Desktop/licenta/TMG-Jbe/src/main/java/dtos/ColumnDTO.java
+/Users/iuliavoit/Desktop/licenta/TMG-Jbe/src/main/java/org/dxworks/tables/models/ColumnDTOTypeAdapter.java
 /Users/iuliavoit/Desktop/licenta/TMG-Jbe/src/main/java/org/dxworks/tables/models/Column.java
 /Users/iuliavoit/Desktop/licenta/TMG-Jbe/src/main/java/Main.java
-/Users/iuliavoit/Desktop/licenta/TMG-Jbe/src/main/java/org/dxworks/tables/models/DateColumn.java
 /Users/iuliavoit/Desktop/licenta/TMG-Jbe/src/main/java/org/dxworks/tables/models/Table.java
-/Users/iuliavoit/Desktop/licenta/TMG-Jbe/src/main/java/org/dxworks/tables/models/ColumnSerializer.java
-/Users/iuliavoit/Desktop/licenta/TMG-Jbe/src/main/java/org/dxworks/tables/models/ColumnExclusionStrategy.java
-/Users/iuliavoit/Desktop/licenta/TMG-Jbe/src/main/java/data/TableConfig.java

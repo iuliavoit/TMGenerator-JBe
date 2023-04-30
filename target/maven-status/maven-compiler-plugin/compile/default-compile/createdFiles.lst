@@ -1,6 +1,7 @@
-org/dxworks/tables/models/Table.class
 org/dxworks/tables/models/Column$ColumnBuilder.class
-org/dxworks/tables/models/ColumnExclusionStrategy.class
-org/dxworks/tables/models/ColumnSerializer.class
+org/dxworks/tables/models/Table.class
+dtos/ColumnDTO.class
+dtos/ColumnDTO$ColumnDTOBuilder.class
 org/dxworks/tables/models/Column.class
+org/dxworks/tables/models/ColumnDTOTypeAdapter.class
 org/dxworks/tables/models/Table$TableBuilder.class
