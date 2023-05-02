@@ -2,6 +2,7 @@ package org.dxworks.tables.models;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
 import dtos.ColumnDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,7 +22,7 @@ public class Table<T> {
     public String name;
     public List<Column<T, ?>> columns;
 
-    public String generateJson() {
+    public JsonObject generateJson() {
         List<ColumnDTO> columnDTOs = new ArrayList<>();
         for (Column<T, ?> column : columns) {
             ColumnDTO columnDTO = createColumnDTO(column);
@@ -37,8 +38,9 @@ public class Table<T> {
                 .disableHtmlEscaping()
                 .setPrettyPrinting()
                 .create();
-
-        return gson.toJson(jsonMap);
+        JsonObject result = gson.fromJson(gson.toJson(jsonMap), JsonObject.class);
+        return result;
+       /* return gson.toJson(jsonMap);*/
     }
 
     private ColumnDTO createColumnDTO(Column<T, ?> column) {
