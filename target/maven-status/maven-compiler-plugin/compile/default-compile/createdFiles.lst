@@ -1,6 +1,0 @@
-org/dxworks/tables/models/Table.class
-org/dxworks/tables/models/Column$ColumnBuilder.class
-org/dxworks/tables/models/ColumnBase.class
-org/dxworks/tables/models/Column.class
-org/dxworks/tables/models/ColumnBaseSerializer.class
-org/dxworks/tables/models/Table$TableBuilder.class
