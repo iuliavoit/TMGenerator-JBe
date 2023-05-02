@@ -40,7 +40,6 @@ public class Table<T> {
                 .create();
         JsonObject result = gson.fromJson(gson.toJson(jsonMap), JsonObject.class);
         return result;
-       /* return gson.toJson(jsonMap);*/
     }
 
     private ColumnDTO createColumnDTO(Column<T, ?> column) {
