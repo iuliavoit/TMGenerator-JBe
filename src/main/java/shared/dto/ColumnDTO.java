@@ -1,20 +1,16 @@
-package org.dxworks.tables.models;
+package shared.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.*;
-import java.util.function.BiFunction;
-import java.util.function.Function;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Column<T, R> extends ColumnBase {
-
+public class ColumnDTO {
     protected String id;
     protected String type;
     protected String name;
@@ -25,11 +21,5 @@ public class Column<T, R> extends ColumnBase {
     protected Boolean borderL;
     protected Boolean borderR;
     protected Boolean borderB;
-    protected List<ColumnBase> childrenColumns;
-
-    protected Function<T, R> computer;
-    protected BiFunction<T, R, Map<String, String>> conditionalFormatter;
-    protected Function<R, String> displayFormatter;
-
-
+    protected List<ColumnDTO> childrenColumns;
 }
