@@ -23,3 +23,4 @@ public class ColumnDTO {
     protected Boolean borderB;
     protected List<ColumnDTO> childrenColumns;
 }
+

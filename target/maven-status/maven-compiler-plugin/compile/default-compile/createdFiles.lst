@@ -1,0 +1,14 @@
+org/dxworks/tables/models/Matrix.class
+dtos/ColumnDTO$ColumnDTOBuilder.class
+dtos/MatrixDTO$MatrixDTOBuilder.class
+org/dxworks/tables/models/Column.class
+dtos/MatrixDTO.class
+org/dxworks/tables/models/Column$ColumnBuilder.class
+org/dxworks/tables/models/MatrixConditionalFormatter.class
+org/dxworks/tables/models/Table.class
+org/dxworks/tables/models/Matrix$MatrixBuilder.class
+dtos/ColumnDTO.class
+org/dxworks/tables/models/MatrixValueComputer$MatrixValueComputerBuilder.class
+org/dxworks/tables/models/MatrixValueComputer.class
+org/dxworks/tables/models/ColumnDTOTypeAdapter.class
+org/dxworks/tables/models/Table$TableBuilder.class
