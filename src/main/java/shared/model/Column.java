@@ -57,11 +57,17 @@ public class Column<T, R> {
     }
 
     public CellDTO createCellDTO(T entity) {
+        //applying the computer
         R computerResult = computer!= null?computer.apply(entity): null;
+        //applying the conditional formatter to the computed result
         Map<String, String> conditionalFormatterResult = conditionalFormatter != null ?
                 conditionalFormatter.apply(entity, computerResult) : new HashMap<>();
+        //checks the boolean properties defining the column cell borders and adds them to the
+        //formatter if true
         Map<String, String> formatter = addBorders(conditionalFormatterResult);
+        //applying the display formatter to the computed result
         String displayResult = displayFormatter != null ? displayFormatter.apply(computerResult) : computerResult != null ? computerResult.toString() : "";
+        //creates a cell having properties value and style
         return new CellDTO(displayResult, convertStyleToJsonString(formatter));
     }
 
